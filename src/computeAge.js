@@ -4,10 +4,13 @@ function computeAge(birthday, currentDate) {
     birthdayYear = birthday.getFullYear()
     currentYear = currentDate.getFullYear()
 
-    age = currentYear - birthdayYear - 1
+    if(birthdayYear >= currentYear) return 0
 
-    if(birthday.getMonth() < currentDate.getMonth()) age++
-    else if (birthday.getMonth() == currentDate.getMonth() && birthday.getDate() <= currentDate.getDate()) age++
+    else {        
+        age = currentYear - birthdayYear - 1
+        if(birthday.getMonth() < currentDate.getMonth()) age++
+        else if (birthday.getMonth() == currentDate.getMonth() && birthday.getDate() <= currentDate.getDate() ) age++
+    }
 
     return age
 }
