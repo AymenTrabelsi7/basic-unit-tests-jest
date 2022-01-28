@@ -38,7 +38,4 @@ function mergedSortedArrays(t1,t2) {
 
     return result
 }
-
-console.log(mergedSortedArrays([1,2,3], [4,5]))
-
 module.exports = mergedSortedArrays
